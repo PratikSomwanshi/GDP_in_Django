@@ -1,0 +1,32 @@
+<!-- gdp_predictor/templates/gdp_predictor/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total GDP Prediction</title>
+</head>
+
+<body>
+    <h1>Total GDP Prediction</h1>
+
+    <h2>Actual Total GDP Values:</h2>
+    <ul>
+        {% for value in actual_total_gdp %}
+        <li>{{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Predicted Total GDP Values:</h2>
+    <ul>
+        {% for value in predicted_total_gdp %}
+        <li>{{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <img src="{{ plot_url }}" alt="Total GDP Prediction Plot">
+
+</body>
+
+</html>
